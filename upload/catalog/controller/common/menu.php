@@ -10,6 +10,8 @@ class ControllerCommonMenu extends Controller {
 
 		$data['categories'] = array();
 
+		$data['contact'] = $this->url->link('information/contact');
+		
 		$categories = $this->model_catalog_category->getCategories(0);
 
 		foreach ($categories as $category) {

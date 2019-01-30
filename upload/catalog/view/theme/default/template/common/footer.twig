@@ -39,14 +39,17 @@
       </div>
     </div>
     <hr>
-    <p>{{ powered }}</p>
+    <!-- <p>{{ powered }}</p> -->
   </div>
 </footer>
 {% for script in scripts %}
 <script src="{{ script }}" type="text/javascript"></script>
 {% endfor %}
-<!--
-OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
-Please donate via PayPal to donate@opencart.com
-//-->
+
+<script type="text/javascript">
+  $('#myTab a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
 </body></html>

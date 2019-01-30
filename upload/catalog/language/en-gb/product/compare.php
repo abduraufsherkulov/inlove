@@ -15,6 +15,7 @@ $_['text_rating']       = 'Rating';
 $_['text_reviews']      = 'Based on %s reviews.';
 $_['text_summary']      = 'Summary';
 $_['text_weight']       = 'Weight';
+$_['text_compare_button'] = 'Compare';
 $_['text_dimension']    = 'Dimensions (L x W x H)';
 $_['text_compare']      = 'Product Compare (%s)';
 $_['text_success']      = 'Success: You have added <a href="%s">%s</a> to your <a href="%s">product comparison</a>!';

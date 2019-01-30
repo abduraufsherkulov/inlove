@@ -1,6 +1,6 @@
-<div id="cart" class="btn-group btn-block">
-  <button type="button" data-toggle="dropdown" data-loading-text="{{ text_loading }}" class="btn btn-inverse btn-block btn-lg dropdown-toggle"><i class="fa fa-shopping-cart"></i> <span id="cart-total">{{ text_items }}</span></button>
-  <ul class="dropdown-menu pull-right">
+<div id="cart" class="btn-group btn-block" style="display: block;">
+  <button type="button" data-toggle="dropdown" data-loading-text="{{ text_loading }}" class="btn btn-inverse btn-block btn-lg dropdown-toggle" style="padding: 0px; background: white; border: none; text-shadow: none; box-shadow: none"><i style="font-size: 35px;" class="fa fa-shopping-cart"></i> <div id="cart-total">{{ text_items }}</div></button>
+  <ul class="dropdown-menu pull-right" style="top: 56px;">
     {% if products or vouchers %}
     <li>
       <table class="table table-striped">
