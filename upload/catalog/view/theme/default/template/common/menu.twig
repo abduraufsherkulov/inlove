@@ -56,10 +56,9 @@
         </div>
         <div class="col-sm-6">
          <ul class="nav navbar-nav rest-link">
-            <li><a href="asd">О нас</a></li>
-            <li><a href="asd">Помощь</a></li>
-            <li><a href="asd">Условия</a></li>
-            <li><a href="asd">Гарантия</a></li>
+         {% for information in informations %}
+          <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+          {% endfor %}
           </ul>
         </div>
         <div class="col-sm-3">

@@ -872,3 +872,19 @@ h2.price {
 		font-size: 22px;
 		color: #8856a5;
 	}
+	.cart-btn{
+		padding: 0px!important; 
+		background: white!important; 
+		border: none!important; 
+		text-shadow: none!important; 
+		box-shadow: none!important;
+	}
+	.cart-btn i {
+		font-size: 35px!important;
+	}
+	.badge-top {
+		background: #08a0e1!important;
+	}
+	.border-left a:hover .badge-top{
+		background: #c92783!important;
+	}

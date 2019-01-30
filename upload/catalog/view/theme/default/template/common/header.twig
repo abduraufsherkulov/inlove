@@ -68,8 +68,8 @@
                   {% endif %}
                 </ul>
               </li>
-              <li class="border-left width-100"><a href="{{compare_button}}" title="{{ text_compare_button }}"><i class="fa fa-bar-chart"></i> <div class="hidden-xs hidden-sm hidden-md">{{ text_compare_button }}</div></a></li>
-              <li class="border-left width-100"><a href="{{ wishlist }}" id="wishlist-total" title="{{ text_wishlist }}"><i class="fa fa-heart"></i> <div class="hidden-xs hidden-sm hidden-md">{{ text_wishlist }}</div></a></li>
+              <li class="border-left width-100"><a href="{{compare_button}}" id="compare-total" title="{{ text_compare_button }}"><i class="fa fa-bar-chart"></i><span class="badge badge-top">{{count_compare}}</span> <div class="hidden-xs hidden-sm hidden-md">{{ text_compare_button }}</div></a></li>
+              <li class="border-left width-100"><a href="{{ wishlist }}" id="wishlist-total" title="{{ text_wishlist }}"><i class="fa fa-heart"></i> <span class="badge badge-top">{{count_wishlist}}</span><div class="hidden-xs hidden-sm hidden-md">{{ text_wishlist }}</div></a></li>
               <li class="border-left width-100">{{ cart }}</li>
 <!--               <li class="border-left"><a href="{{ shopping_cart }}" title="{{ text_shopping_cart }}"><i class="fa fa-shopping-cart"></i> <div class="hidden-xs hidden-sm hidden-md">{{ text_shopping_cart }}</div></a></li> -->
 <!--               <li><a href="{{ checkout }}" title="{{ text_checkout }}"><i class="fa fa-share"></i> <span class="hidden-xs hidden-sm hidden-md">{{ text_checkout }}</span></a></li> -->

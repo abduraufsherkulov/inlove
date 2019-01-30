@@ -261,6 +261,7 @@ class ControllerCheckoutCart extends Controller {
 
 	public function add() {
 		$this->load->language('checkout/cart');
+				$this->load->language('common/header');
 
 		$json = array();
 
@@ -316,6 +317,7 @@ class ControllerCheckoutCart extends Controller {
 			}
 
 			if (!$json) {
+
 				$this->cart->add($this->request->post['product_id'], $quantity, $option, $recurring_id);
 
 				$json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('checkout/cart'));
@@ -332,7 +334,7 @@ class ControllerCheckoutCart extends Controller {
 				$totals = array();
 				$taxes = $this->cart->getTaxes();
 				$total = 0;
-		
+
 				// Because __call can not keep var references so we put them into an array. 			
 				$total_data = array(
 					'totals' => &$totals,
@@ -371,6 +373,8 @@ class ControllerCheckoutCart extends Controller {
 				}
 
 				$json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']));
+				$json['text_cart'] = $this->language->get('text_shopping_cart');
+				$json['counted_cart'] = $this->cart->countProducts();
 			} else {
 				$json['redirect'] = str_replace('&amp;', '&', $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']));
 			}
@@ -382,6 +386,7 @@ class ControllerCheckoutCart extends Controller {
 
 	public function edit() {
 		$this->load->language('checkout/cart');
+		$this->load->language('common/header');
 
 		$json = array();
 
@@ -409,6 +414,7 @@ class ControllerCheckoutCart extends Controller {
 	public function remove() {
 		$this->load->language('checkout/cart');
 
+				$this->load->language('common/header');
 		$json = array();
 
 		// Remove
@@ -470,6 +476,9 @@ class ControllerCheckoutCart extends Controller {
 			}
 
 			$json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']));
+			
+			$json['text_cart'] = $this->language->get('text_shopping_cart');
+			$json['counted_cart'] = $this->cart->countProducts();
 		}
 
 		$this->response->addHeader('Content-Type: application/json');

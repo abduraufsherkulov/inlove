@@ -161,7 +161,7 @@ var cart = {
 
 					// Need to set timeout otherwise it wont update the total
 					setTimeout(function () {
-						$('#cart > button').html('<span id="cart-total"><i class="fa fa-shopping-cart"></i> ' + json['total'] + '</span>');
+						$('#cart > button').html('<i class="fa fa-shopping-cart"></i> <div id="cart-total" class="badge badge-top">' + json['counted_cart'] + '</div>' + '<div>' + json['text_cart'] + '</div>');
 					}, 100);
 
 					$('html, body').animate({ scrollTop: 0 }, 'slow');
@@ -218,7 +218,7 @@ var cart = {
 			success: function(json) {
 				// Need to set timeout otherwise it wont update the total
 				setTimeout(function () {
-					$('#cart > button').html('<span id="cart-total"><i class="fa fa-shopping-cart"></i> ' + json['total'] + '</span>');
+					$('#cart > button').html('<i class="fa fa-shopping-cart"></i> <div id="cart-total" class="badge badge-top">' + json['counted_cart'] + '</div>' + '<div>' + json['text_cart'] + '</div>');
 				}, 100);
 
 				if (getURLVar('route') == 'checkout/cart' || getURLVar('route') == 'checkout/checkout') {
@@ -289,7 +289,6 @@ var wishlist = {
 
 				$('#wishlist-total span').html(json['total']);
 				$('#wishlist-total').attr('title', json['total']);
-
 				$('html, body').animate({ scrollTop: 0 }, 'slow');
 			},
 			error: function(xhr, ajaxOptions, thrownError) {
@@ -315,10 +314,15 @@ var compare = {
 				if (json['success']) {
 					$('#content').parent().before('<div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> ' + json['success'] + ' <button type="button" class="close" data-dismiss="alert">&times;</button></div>');
 
-					$('#compare-total').html(json['total']);
-
-					$('html, body').animate({ scrollTop: 0 }, 'slow');
 				}
+
+				$('#compare-total').attr('title', json['total']);
+
+					$('#compare-total span').html(json['total']);
+					$('html, body').animate({ scrollTop: 0 }, 'slow');
+				// $('#wishlist-total span').html(json['total']);
+				// $('#wishlist-total').attr('title', json['total']);
+				// $('html, body').animate({ scrollTop: 0 }, 'slow');
 			},
 			error: function(xhr, ajaxOptions, thrownError) {
 				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
