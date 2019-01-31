@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse" style="height: 60px!important;">
           <ul class="nav navbar-nav" style="width: 100%">
             <li class="dropdown" style="width: 100%">
-              <a href="#" style="text-transform: uppercase; font-size: 14px; font-weight: 700; padding: 20px; background: #c92783" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-navicon" style="padding-right: 10px;"></i>Каталог товаров <b class="caret"></b></a>
+              <a href="#" style="text-transform: uppercase; font-size: 14px; font-weight: 700; padding: 20px; background: #c92783" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-navicon" style="padding-right: 10px;"></i>{{text_catalog}}<b class="caret"></b></a>
               <ul class="dropdown-menu" id="menu1" style="width: 100%">
                   {% for category in categories %}
                   {% if category.children %}
