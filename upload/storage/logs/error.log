@@ -20,3 +20,8 @@
 2019-01-30 11:53:36 - PHP Notice:  Undefined index: id in C:\xampp\htdocs\inlove\upload\catalog\controller\common\menu.php on line 28
 2019-01-30 16:13:53 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\inlove\upload\system\library\mail\mail.php on line 77
 2019-01-30 16:13:54 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\inlove\upload\system\library\mail\mail.php on line 77
+2019-02-03 5:30:49 - PHP Notice:  Array to string conversion in C:\xampp\htdocs\inlove\upload\system\library\template\Twig\Environment.php(403) : eval()'d code on line 351
+2019-02-03 5:30:49 - PHP Notice:  Array to string conversion in C:\xampp\htdocs\inlove\upload\system\library\template\Twig\Environment.php(403) : eval()'d code on line 351
+2019-02-03 5:30:49 - PHP Notice:  Array to string conversion in C:\xampp\htdocs\inlove\upload\system\library\template\Twig\Environment.php(403) : eval()'d code on line 351
+2019-02-03 5:30:49 - PHP Notice:  Array to string conversion in C:\xampp\htdocs\inlove\upload\system\library\template\Twig\Environment.php(403) : eval()'d code on line 351
+2019-02-03 5:30:49 - PHP Notice:  Array to string conversion in C:\xampp\htdocs\inlove\upload\system\library\template\Twig\Environment.php(403) : eval()'d code on line 351

@@ -5,6 +5,27 @@ class ControllerCommonHeader extends Controller {
 		$this->load->model('setting/extension');
 		$this->load->language('product/compare');
 
+		//footer
+		$this->load->language('common/footer');
+		$this->load->model('catalog/information');
+
+
+		$data['information_last'] = array();
+
+		foreach ($this->model_catalog_information->getInformations() as $result) {
+			// echo "<pre>";
+			//     print_r($result); // or var_dump($data);
+			//     echo "</pre>";
+			if ($result['information_id'] === '9'|| $result['information_id'] === '10'|| $result['information_id'] === '11'|| $result['information_id'] === '12'|| $result['information_id'] === '13') {
+				$data['information_last'][] = array(
+					'id' => $result['information_id'],
+					'title' => htmlspecialchars_decode($result['title']),
+					'href'  => $this->url->link('information/information', 'information_id=' . $result['information_id'])
+				);
+			}
+		}
+
+
 		$data['analytics'] = array();
 
 		$analytics = $this->model_setting_extension->getExtensions('analytics');

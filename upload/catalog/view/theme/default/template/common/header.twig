@@ -38,6 +38,22 @@
 {% endfor %}
 </head>
 <body>
+
+<nav id="topoftop">
+  <div class="container">
+      <div id="topoftop-links" class="pull-right">
+        <ul class="list-inline cutbottom">
+          <li class="hidden-xs hidden-sm hidden-md"><a href="{{ contact }}">Что с моим заказом</a> <span class="hidden-xs hidden-sm hidden-md"></span></li>
+          <li class="hidden-xs hidden-sm hidden-md"><a href="{{ contact }}">Обратный связь</a> <span class="hidden-xs hidden-sm hidden-md"></span></li>
+          <li><a href="{{ contact }}"><i class="fa fa-sitemap head-top" aria-hidden="true"></i></a> <span class="hidden-xs hidden-sm hidden-md"></span></li>
+          <li><a href="{{ contact }}"><i class="fa fa-instagram head-top" aria-hidden="true"></i></a> <span class="hidden-xs hidden-sm hidden-md"></span></li>
+          <li><a href="{{ contact }}"><i class="fa fa-facebook-square head-top" aria-hidden="true"></i></a> <span class="hidden-xs hidden-sm hidden-md"></span></li>
+          <li><a href="{{ contact }}"><i class="fa fa-telegram head-top" aria-hidden="true"></i></a> <span class="hidden-xs hidden-sm hidden-md"></span></li>
+          <li>{{ language }}</li>
+        </ul>
+      </div>
+  </div>
+</nav>
 <nav id="top">
   <div class="container">
     <div class="pull-left">
@@ -47,10 +63,10 @@
           <h1><a href="{{ home }}">{{ name }}</a></h1>
           {% endif %}</div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 col-xs-12">
           {{ search }}
         </div>
-        <div class="col-sm-5">    
+        <div class="col-sm-5 col-xs-12">    
           <div id="top-links" class="nav pull-right">
             <ul class="list-inline" style="display: flex; align-items: center; text-align: center">
 <!--               <li><a href="{{ contact }}"><i class="fa fa-phone"></i></a> <span class="hidden-xs hidden-sm hidden-md">{{ telephone }}</span></li> -->
@@ -77,11 +93,52 @@
           </div>
         </div>
         <!-- <div class="col-sm-1">{{ currency }}</div> -->
-        <div class="col-sm-1">{{ language }}</div>
-        </div>
+<!--         <div class="col-sm-1">{{ language }}</div>
+        </div> -->
   </div>
   </div>
 </nav>
+<nav id="toper">
+  <div class="container">
+      <div class="row">
+        <ul class="flexer mid">
+            {% for information in information_last %}
+            <li>
+              <a class="flexme" href="{{ information.href }}">
+              {% if information.id == '9' %}
+              {% set text = "<img src='image/small_icons/1.png' />" %}
+              {{text}}
+              <span class="padme hidden-xs hidden-sm hidden-md">{{ information.title }}</span>
+              {% endif %}
+              {% if information.id == '10' %}
+              {% set text = "<img src='image/small_icons/2.png' />" %}
+              {{text}}
+              <span class="padme hidden-xs hidden-sm hidden-md">{{ information.title }}</span>
+              {% endif %}
+              {% if information.id == '11' %}
+              {% set text = "<img src='image/small_icons/3.png' />" %}
+              {{text}}
+              <span class="padme hidden-xs hidden-sm hidden-md">{{ information.title }}</span>
+              {% endif %}
+              {% if information.id == '12' %}
+              {% set text = "<img src='image/small_icons/4.png' />" %}
+              {{text}}
+              <span class="padme hidden-xs hidden-sm hidden-md">{{ information.title }}</span>
+              {% endif %}
+              {% if information.id == '13' %}
+              {% set text = "<img src='image/small_icons/5.png' />" %}
+              {{text}}
+              <span class="padme hidden-xs hidden-sm hidden-md">{{ information.title }}</span>
+              {% endif %}
+              </a>
+            </li>
+            {% endfor %}
+         </ul>
+      </div>
+  </div>
+</nav>
+<div class="container">
+</div>
 <!-- <header>
   <div class="container">
     <div class="row">

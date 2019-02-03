@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 31, 2019 at 09:32 AM
+-- Generation Time: Feb 03, 2019 at 09:34 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -129,7 +129,8 @@ INSERT INTO `oc_api_session` (`api_session_id`, `api_id`, `session_id`, `ip`, `d
 (10, 1, 'b0458c965b55e61c5ddfa280c0', '::1', '2019-01-30 17:08:43', '2019-01-30 17:08:43'),
 (11, 1, '6fb197173472de702ab3de0b27', '::1', '2019-01-30 17:08:53', '2019-01-30 17:08:54'),
 (12, 1, '528d79add438e70cea8110ce67', '::1', '2019-01-30 17:09:00', '2019-01-30 17:09:09'),
-(13, 1, 'd8d9185beae2153a6780e5e636', '::1', '2019-01-30 17:09:10', '2019-01-30 17:09:10');
+(13, 1, 'd8d9185beae2153a6780e5e636', '::1', '2019-01-30 17:09:10', '2019-01-30 17:09:10'),
+(14, 1, '2e4df1c660586bd1de6fa0f974', '::1', '2019-02-03 11:37:25', '2019-02-03 11:37:25');
 
 -- --------------------------------------------------------
 
@@ -336,13 +337,6 @@ CREATE TABLE `oc_cart` (
   `date_added` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `oc_cart`
---
-
-INSERT INTO `oc_cart` (`cart_id`, `api_id`, `customer_id`, `session_id`, `product_id`, `recurring_id`, `option`, `quantity`, `date_added`) VALUES
-(14, 0, 0, '799a62d820b8cdc963ee703271', 40, 0, '[]', 1, '2019-01-30 21:13:32');
-
 -- --------------------------------------------------------
 
 --
@@ -367,43 +361,17 @@ CREATE TABLE `oc_category` (
 
 INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`, `sort_order`, `status`, `date_added`, `date_modified`) VALUES
 (25, '', 0, 1, 1, 3, 1, '2009-01-31 01:04:25', '2011-05-30 12:14:55'),
-(27, '', 20, 0, 0, 2, 1, '2009-01-31 01:55:34', '2010-08-22 06:32:15'),
-(20, 'catalog/demo/compaq_presario.jpg', 0, 1, 1, 1, 1, '2009-01-05 21:49:43', '2011-07-16 02:14:42'),
 (24, '', 0, 1, 1, 5, 1, '2009-01-20 02:36:26', '2011-05-30 12:15:18'),
-(18, 'catalog/demo/hp_2.jpg', 0, 1, 0, 2, 1, '2009-01-05 21:49:15', '2011-05-30 12:13:55'),
 (17, '', 0, 1, 1, 4, 1, '2009-01-03 21:08:57', '2011-05-30 12:15:11'),
 (28, '', 25, 0, 0, 1, 1, '2009-02-02 13:11:12', '2010-08-22 06:32:46'),
-(26, '', 20, 0, 0, 1, 1, '2009-01-31 01:55:14', '2010-08-22 06:31:45'),
 (29, '', 25, 0, 0, 1, 1, '2009-02-02 13:11:37', '2010-08-22 06:32:39'),
 (30, '', 25, 0, 0, 1, 1, '2009-02-02 13:11:59', '2010-08-22 06:33:00'),
 (31, '', 25, 0, 0, 1, 1, '2009-02-03 14:17:24', '2010-08-22 06:33:06'),
 (32, '', 25, 0, 0, 1, 1, '2009-02-03 14:17:34', '2010-08-22 06:33:12'),
 (33, '', 0, 1, 1, 6, 1, '2009-02-03 14:17:55', '2011-05-30 12:15:25'),
-(34, 'catalog/demo/ipod_touch_4.jpg', 0, 1, 4, 7, 1, '2009-02-03 14:18:11', '2011-05-30 12:15:31'),
 (35, '', 28, 0, 0, 0, 1, '2010-09-17 10:06:48', '2010-09-18 14:02:42'),
 (36, '', 28, 0, 0, 0, 1, '2010-09-17 10:07:13', '2010-09-18 14:02:55'),
-(37, '', 34, 0, 0, 0, 1, '2010-09-18 14:03:39', '2011-04-22 01:55:08'),
-(38, '', 34, 0, 0, 0, 1, '2010-09-18 14:03:51', '2010-09-18 14:03:51'),
-(39, '', 34, 0, 0, 0, 1, '2010-09-18 14:04:17', '2011-04-22 01:55:20'),
-(40, '', 34, 0, 0, 0, 1, '2010-09-18 14:05:36', '2010-09-18 14:05:36'),
-(41, '', 34, 0, 0, 0, 1, '2010-09-18 14:05:49', '2011-04-22 01:55:30'),
-(42, '', 34, 0, 0, 0, 1, '2010-09-18 14:06:34', '2010-11-07 20:31:04'),
-(43, '', 34, 0, 0, 0, 1, '2010-09-18 14:06:49', '2011-04-22 01:55:40'),
-(44, '', 34, 0, 0, 0, 1, '2010-09-21 15:39:21', '2010-11-07 20:30:55'),
-(45, '', 18, 0, 0, 0, 1, '2010-09-24 18:29:16', '2011-04-26 08:52:11'),
-(46, '', 18, 0, 0, 0, 1, '2010-09-24 18:29:31', '2011-04-26 08:52:23'),
-(47, '', 34, 0, 0, 0, 1, '2010-11-07 11:13:16', '2010-11-07 11:13:16'),
-(48, '', 34, 0, 0, 0, 1, '2010-11-07 11:13:33', '2010-11-07 11:13:33'),
-(49, '', 34, 0, 0, 0, 1, '2010-11-07 11:14:04', '2010-11-07 11:14:04'),
-(50, '', 34, 0, 0, 0, 1, '2010-11-07 11:14:23', '2011-04-22 01:16:01'),
-(51, '', 34, 0, 0, 0, 1, '2010-11-07 11:14:38', '2011-04-22 01:16:13'),
-(52, '', 34, 0, 0, 0, 1, '2010-11-07 11:16:09', '2011-04-22 01:54:57'),
-(53, '', 34, 0, 0, 0, 1, '2010-11-07 11:28:53', '2011-04-22 01:14:36'),
-(54, '', 34, 0, 0, 0, 1, '2010-11-07 11:29:16', '2011-04-22 01:16:50'),
-(55, '', 34, 0, 0, 0, 1, '2010-11-08 10:31:32', '2010-11-08 10:31:32'),
-(56, '', 34, 0, 0, 0, 1, '2010-11-08 10:31:50', '2011-04-22 01:16:37'),
-(57, '', 0, 1, 1, 3, 1, '2011-04-26 08:53:16', '2011-05-30 12:15:05'),
-(58, '', 52, 0, 0, 0, 1, '2011-05-08 13:44:16', '2011-05-08 13:44:16');
+(57, '', 0, 1, 1, 3, 1, '2011-04-26 08:53:16', '2011-05-30 12:15:05');
 
 -- --------------------------------------------------------
 
@@ -432,76 +400,24 @@ INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `de
 (31, 1, 'Scanners', '', 'Scanners', '', ''),
 (30, 1, 'Printers', '', 'Printers', '', ''),
 (29, 1, 'Mice and Trackballs', '', 'Mice and Trackballs', '', ''),
-(27, 1, 'Mac', '', 'Mac', '', ''),
-(26, 1, 'PC', '', 'PC', '', ''),
 (17, 1, 'Software', '', 'Software', '', ''),
 (25, 1, 'Components', '', 'Components', '', ''),
 (24, 1, 'Phones &amp; PDAs', '', 'Phones &amp; PDAs', '', ''),
-(20, 1, 'Desktops', '&lt;p&gt;\r\n	Example of category description text&lt;/p&gt;\r\n', 'Desktops', 'Example of category description', ''),
 (35, 1, 'test 1', '', 'test 1', '', ''),
 (36, 1, 'test 2', '', 'test 2', '', ''),
-(37, 1, 'test 5', '', 'test 5', '', ''),
-(38, 1, 'test 4', '', 'test 4', '', ''),
-(39, 1, 'test 6', '', 'test 6', '', ''),
-(40, 1, 'test 7', '', 'test 7', '', ''),
-(41, 1, 'test 8', '', 'test 8', '', ''),
-(42, 1, 'test 9', '', 'test 9', '', ''),
-(43, 1, 'test 11', '', 'test 11', '', ''),
-(34, 1, 'MP3 Players', '&lt;p&gt;\r\n	Shop Laptop feature only the best laptop deals on the market. By comparing laptop deals from the likes of PC World, Comet, Dixons, The Link and Carphone Warehouse, Shop Laptop has the most comprehensive selection of laptops on the internet. At Shop Laptop, we pride ourselves on offering customers the very best laptop deals. From refurbished laptops to netbooks, Shop Laptop ensures that every laptop - in every colour, style, size and technical spec - is featured on the site at the lowest possible price.&lt;/p&gt;\r\n', 'MP3 Players', '', ''),
-(18, 1, 'Laptops &amp; Notebooks', '&lt;p&gt;\r\n	Shop Laptop feature only the best laptop deals on the market. By comparing laptop deals from the likes of PC World, Comet, Dixons, The Link and Carphone Warehouse, Shop Laptop has the most comprehensive selection of laptops on the internet. At Shop Laptop, we pride ourselves on offering customers the very best laptop deals. From refurbished laptops to netbooks, Shop Laptop ensures that every laptop - in every colour, style, size and technical spec - is featured on the site at the lowest possible price.&lt;/p&gt;\r\n', 'Laptops &amp; Notebooks', '', ''),
-(44, 1, 'test 12', '', 'test 12', '', ''),
-(45, 1, 'Windows', '', 'Windows', '', ''),
-(46, 1, 'Macs', '', 'Macs', '', ''),
-(47, 1, 'test 15', '', 'test 15', '', ''),
-(48, 1, 'test 16', '', 'test 16', '', ''),
-(49, 1, 'test 17', '', 'test 17', '', ''),
-(50, 1, 'test 18', '', 'test 18', '', ''),
-(51, 1, 'test 19', '', 'test 19', '', ''),
-(52, 1, 'test 20', '', 'test 20', '', ''),
-(53, 1, 'test 21', '', 'test 21', '', ''),
-(54, 1, 'test 22', '', 'test 22', '', ''),
-(55, 1, 'test 23', '', 'test 23', '', ''),
-(56, 1, 'test 24', '', 'test 24', '', ''),
 (57, 1, 'Tablets', '', 'Tablets', '', ''),
-(58, 1, 'test 25', '', 'test 25', '', ''),
 (28, 2, 'Monitors', '', 'Monitors', '', ''),
 (33, 2, 'Cameras', '', 'Cameras', '', ''),
 (32, 2, 'Web Cameras', '', 'Web Cameras', '', ''),
 (31, 2, 'Scanners', '', 'Scanners', '', ''),
 (30, 2, 'Printers', '', 'Printers', '', ''),
 (29, 2, 'Mice and Trackballs', '', 'Mice and Trackballs', '', ''),
-(27, 2, 'Mac', '', 'Mac', '', ''),
-(26, 2, 'PC', '', 'PC', '', ''),
 (17, 2, 'Software', '', 'Software', '', ''),
 (25, 2, 'Components', '', 'Components', '', ''),
 (24, 2, 'Phones &amp; PDAs', '', 'Phones &amp; PDAs', '', ''),
-(20, 2, 'Desktops', '&lt;p&gt;\r\n	Example of category description text&lt;/p&gt;\r\n', 'Desktops', 'Example of category description', ''),
 (35, 2, 'test 1', '', 'test 1', '', ''),
 (36, 2, 'test 2', '', 'test 2', '', ''),
-(37, 2, 'test 5', '', 'test 5', '', ''),
-(38, 2, 'test 4', '', 'test 4', '', ''),
-(39, 2, 'test 6', '', 'test 6', '', ''),
-(40, 2, 'test 7', '', 'test 7', '', ''),
-(41, 2, 'test 8', '', 'test 8', '', ''),
-(42, 2, 'test 9', '', 'test 9', '', ''),
-(43, 2, 'test 11', '', 'test 11', '', ''),
-(34, 2, 'MP3 Players', '&lt;p&gt;\r\n	Shop Laptop feature only the best laptop deals on the market. By comparing laptop deals from the likes of PC World, Comet, Dixons, The Link and Carphone Warehouse, Shop Laptop has the most comprehensive selection of laptops on the internet. At Shop Laptop, we pride ourselves on offering customers the very best laptop deals. From refurbished laptops to netbooks, Shop Laptop ensures that every laptop - in every colour, style, size and technical spec - is featured on the site at the lowest possible price.&lt;/p&gt;\r\n', 'MP3 Players', '', ''),
-(18, 2, 'Laptops &amp; Notebooks', '&lt;p&gt;\r\n	Shop Laptop feature only the best laptop deals on the market. By comparing laptop deals from the likes of PC World, Comet, Dixons, The Link and Carphone Warehouse, Shop Laptop has the most comprehensive selection of laptops on the internet. At Shop Laptop, we pride ourselves on offering customers the very best laptop deals. From refurbished laptops to netbooks, Shop Laptop ensures that every laptop - in every colour, style, size and technical spec - is featured on the site at the lowest possible price.&lt;/p&gt;\r\n', 'Laptops &amp; Notebooks', '', ''),
-(44, 2, 'test 12', '', 'test 12', '', ''),
-(45, 2, 'Windows', '', 'Windows', '', ''),
-(46, 2, 'Macs', '', 'Macs', '', ''),
-(47, 2, 'test 15', '', 'test 15', '', ''),
-(48, 2, 'test 16', '', 'test 16', '', ''),
-(49, 2, 'test 17', '', 'test 17', '', ''),
-(50, 2, 'test 18', '', 'test 18', '', ''),
-(51, 2, 'test 19', '', 'test 19', '', ''),
-(52, 2, 'test 20', '', 'test 20', '', ''),
-(53, 2, 'test 21', '', 'test 21', '', ''),
-(54, 2, 'test 22', '', 'test 22', '', ''),
-(55, 2, 'test 23', '', 'test 23', '', ''),
-(56, 2, 'test 24', '', 'test 24', '', ''),
-(57, 2, 'Tablets', '', 'Tablets', '', ''),
-(58, 2, 'test 25', '', 'test 25', '', '');
+(57, 2, 'Tablets', '', 'Tablets', '', '');
 
 -- --------------------------------------------------------
 
@@ -548,59 +464,9 @@ INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
 (31, 31, 1),
 (32, 25, 0),
 (32, 32, 1),
-(20, 20, 0),
-(27, 20, 0),
-(27, 27, 1),
-(26, 20, 0),
-(26, 26, 1),
 (24, 24, 0),
-(18, 18, 0),
-(45, 18, 0),
-(45, 45, 1),
-(46, 18, 0),
-(46, 46, 1),
 (17, 17, 0),
 (33, 33, 0),
-(34, 34, 0),
-(37, 34, 0),
-(37, 37, 1),
-(38, 34, 0),
-(38, 38, 1),
-(39, 34, 0),
-(39, 39, 1),
-(40, 34, 0),
-(40, 40, 1),
-(41, 34, 0),
-(41, 41, 1),
-(42, 34, 0),
-(42, 42, 1),
-(43, 34, 0),
-(43, 43, 1),
-(44, 34, 0),
-(44, 44, 1),
-(47, 34, 0),
-(47, 47, 1),
-(48, 34, 0),
-(48, 48, 1),
-(49, 34, 0),
-(49, 49, 1),
-(50, 34, 0),
-(50, 50, 1),
-(51, 34, 0),
-(51, 51, 1),
-(52, 34, 0),
-(52, 52, 1),
-(58, 34, 0),
-(58, 52, 1),
-(58, 58, 2),
-(53, 34, 0),
-(53, 53, 1),
-(54, 34, 0),
-(54, 54, 1),
-(55, 34, 0),
-(55, 55, 1),
-(56, 34, 0),
-(56, 56, 1),
 (57, 57, 0);
 
 -- --------------------------------------------------------
@@ -644,43 +510,17 @@ CREATE TABLE `oc_category_to_store` (
 
 INSERT INTO `oc_category_to_store` (`category_id`, `store_id`) VALUES
 (17, 0),
-(18, 0),
-(20, 0),
 (24, 0),
 (25, 0),
-(26, 0),
-(27, 0),
 (28, 0),
 (29, 0),
 (30, 0),
 (31, 0),
 (32, 0),
 (33, 0),
-(34, 0),
 (35, 0),
 (36, 0),
-(37, 0),
-(38, 0),
-(39, 0),
-(40, 0),
-(41, 0),
-(42, 0),
-(43, 0),
-(44, 0),
-(45, 0),
-(46, 0),
-(47, 0),
-(48, 0),
-(49, 0),
-(50, 0),
-(51, 0),
-(52, 0),
-(53, 0),
-(54, 0),
-(55, 0),
-(56, 0),
-(57, 0),
-(58, 0);
+(57, 0);
 
 -- --------------------------------------------------------
 
@@ -1052,7 +892,7 @@ CREATE TABLE `oc_currency` (
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
 (1, 'Pound Sterling', 'GBP', '£', '', '2', 0.61250001, 1, '2014-09-25 14:40:00'),
 (3, 'Euro', 'EUR', '', '€', '2', 1.00000000, 1, '2019-01-30 15:43:47'),
-(4, 'Uzbekistan Som', 'UZS', '', ' Сум', '2', 1.00000000, 1, '2019-01-30 16:11:50');
+(4, 'Uzbekistan Som', 'UZS', '', ' Сум', '2', 1.00000000, 1, '2019-02-02 10:30:29');
 
 -- --------------------------------------------------------
 
@@ -1683,7 +1523,12 @@ INSERT INTO `oc_information` (`information_id`, `bottom`, `sort_order`, `status`
 (5, 1, 4, 1),
 (6, 1, 2, 1),
 (7, 0, 0, 1),
-(8, 0, 0, 1);
+(8, 0, 0, 1),
+(9, 0, 1, 1),
+(10, 0, 2, 1),
+(11, 0, 3, 1),
+(12, 0, 4, 1),
+(13, 0, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -1717,7 +1562,17 @@ INSERT INTO `oc_information_description` (`information_id`, `language_id`, `titl
 (7, 2, 'Помощь', '&lt;p&gt;Помощь&lt;br&gt;&lt;/p&gt;', 'Помощь', '', ''),
 (7, 1, 'Help', '&lt;p&gt;Help&lt;/p&gt;', 'Help', '', ''),
 (8, 2, 'Гарантия', '&lt;p&gt;Гарантия&lt;br&gt;&lt;/p&gt;', 'Гарантия', '', ''),
-(8, 1, 'Guarantee', '&lt;p&gt;Guarantee&lt;br&gt;&lt;/p&gt;', 'Guarantee', '', '');
+(8, 1, 'Guarantee', '&lt;p&gt;Guarantee&lt;br&gt;&lt;/p&gt;', 'Guarantee', '', ''),
+(9, 2, 'Бесплатная доставка при &lt;br&gt; заказе от 3000 рублей', '&lt;div class=&quot;container&quot;&gt;\r\n  &lt;div class=&quot;row&quot;&gt;\r\n    &lt;div class=&quot;flexer&quot;&gt;\r\n      &lt;div&gt;&lt;br&gt;&lt;/div&gt;\r\n    &lt;/div&gt;\r\n  &lt;/div&gt;\r\n&lt;/div&gt;', 'sample', '', ''),
+(9, 1, 'Sample', '&lt;p&gt;asd&lt;/p&gt;', 'sample', '', ''),
+(10, 2, 'Непрозрачная упаковка&lt;br&gt;конфиденциальность', '&lt;p&gt;Икон 2&lt;br&gt;&lt;/p&gt;', 'Икон 2', '', ''),
+(10, 1, 'Икон 2', '&lt;p&gt;Икон 2&lt;br&gt;&lt;/p&gt;', 'Икон 2', '', ''),
+(11, 2, 'Гарантия низких цен!', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; white-space: pre-wrap;&quot;&gt;Гарантия низких цен! Сертификаты на всю продукцию&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Гарантия низких цен! Сертификаты на всю продукцию', '', ''),
+(11, 1, 'Гарантия низких цен! Сертификаты на всю продукцию', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; white-space: pre-wrap;&quot;&gt;Гарантия низких цен! Сертификаты на всю продукцию&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Гарантия низких цен! Сертификаты на всю продукцию', '', ''),
+(12, 2, ' за оплату онлайн', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; white-space: pre-wrap;&quot;&gt; за оплату онлайн&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', ' за оплату онлайн', '', ''),
+(12, 1, ' за оплату онлайн', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; white-space: pre-wrap;&quot;&gt; за оплату онлайн&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', ' за оплату онлайн', '', ''),
+(13, 2, 'Доставка от 2-х часов', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; white-space: pre-wrap;&quot;&gt;Доставка от 2-х часов&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Доставка от 2-х часов', '', ''),
+(13, 1, 'Доставка от 2-х часов', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; white-space: pre-wrap;&quot;&gt;Доставка от 2-х часов&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Доставка от 2-х часов', '', '');
 
 -- --------------------------------------------------------
 
@@ -1739,7 +1594,12 @@ INSERT INTO `oc_information_to_layout` (`information_id`, `store_id`, `layout_id
 (4, 0, 0),
 (7, 0, 0),
 (5, 0, 0),
-(8, 0, 0);
+(8, 0, 0),
+(9, 0, 1),
+(10, 0, 0),
+(11, 0, 0),
+(12, 0, 0),
+(13, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1762,7 +1622,12 @@ INSERT INTO `oc_information_to_store` (`information_id`, `store_id`) VALUES
 (5, 0),
 (6, 0),
 (7, 0),
-(8, 0);
+(8, 0),
+(9, 0),
+(10, 0),
+(11, 0),
+(12, 0),
+(13, 0);
 
 -- --------------------------------------------------------
 
@@ -1848,7 +1713,6 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (89, 1, 'featured.28', 'content_top', 2),
 (72, 3, 'category', 'column_left', 1),
 (73, 3, 'banner.30', 'column_left', 2),
-(88, 1, 'html.32', 'content_top', 1),
 (87, 1, 'slideshow.27', 'content_top', 0),
 (92, 1, 'featured.33', 'column_right', 1);
 
@@ -2057,9 +1921,8 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (30, 'Category', 'banner', '{\"name\":\"Category\",\"banner_id\":\"6\",\"width\":\"182\",\"height\":\"182\",\"status\":\"1\"}'),
 (29, 'Home Page', 'carousel', '{\"name\":\"Home Page\",\"banner_id\":\"8\",\"width\":\"130\",\"height\":\"100\",\"status\":\"1\"}'),
 (28, 'Home Page', 'featured', '{\"name\":\"Home Page\",\"product\":[\"43\",\"40\",\"42\",\"30\"],\"limit\":\"4\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}'),
-(27, 'Home Page', 'slideshow', '{\"name\":\"Home Page\",\"banner_id\":\"7\",\"width\":\"1140\",\"height\":\"380\",\"status\":\"1\"}'),
+(27, 'Home Page', 'slideshow', '{\"name\":\"Home Page\",\"banner_id\":\"7\",\"width\":\"1140\",\"height\":\"420\",\"status\":\"1\"}'),
 (31, 'Banner 1', 'banner', '{\"name\":\"Banner 1\",\"banner_id\":\"6\",\"width\":\"182\",\"height\":\"182\",\"status\":\"1\"}'),
-(32, 'Home-Tab', 'html', '{\"name\":\"Home-Tab\",\"module_description\":{\"2\":{\"title\":\"\",\"description\":\"  &lt;!-- Nav tabs --&gt;\\r\\n  &lt;ul class=&quot;nav nav-tabs constructed-nav&quot; role=&quot;tablist&quot;&gt;\\r\\n    &lt;li role=&quot;presentation&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;#home&quot; aria-controls=&quot;home&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot; aria-expanded=&quot;true&quot;&gt;\\u0410\\u043d\\u043e\\u043d\\u0438\\u043c\\u043d\\u043e\\u0441\\u0442\\u044c&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n    &lt;li role=&quot;presentation&quot; class=&quot;&quot;&gt;&lt;a href=&quot;#profile&quot; aria-controls=&quot;profile&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot; aria-expanded=&quot;true&quot;&gt;\\u0411\\u0435\\u0437\\u043e\\u043f\\u0430\\u0441\\u043d\\u043e\\u0441\\u0442\\u044c&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n    &lt;li role=&quot;presentation&quot; class=&quot;&quot;&gt;&lt;a href=&quot;#messages&quot; aria-controls=&quot;messages&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot; aria-expanded=&quot;true&quot;&gt;\\u041e\\u043f\\u043b\\u0430\\u0442\\u0430&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n    &lt;li role=&quot;presentation&quot; class=&quot;&quot;&gt;&lt;a href=&quot;#settings&quot; aria-controls=&quot;settings&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot; aria-expanded=&quot;true&quot;&gt;\\u0414\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0430&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n  &lt;\\/ul&gt;\\r\\n\\r\\n  &lt;!-- Tab panes --&gt;\\r\\n  &lt;div class=&quot;tab-content&quot;&gt;\\r\\n    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane&quot; id=&quot;home&quot;&gt;\\u0410\\u043d\\u043e\\u043d\\u0438\\u043c\\u043d\\u043e\\u0441\\u0442\\u044c&lt;\\/div&gt;\\r\\n    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane active&quot; id=&quot;profile&quot;&gt;\\u0411\\u0435\\u0437\\u043e\\u043f\\u0430\\u0441\\u043d\\u043e\\u0441\\u0442\\u044c&lt;\\/div&gt;\\r\\n    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane&quot; id=&quot;messages&quot;&gt;\\u041e\\u043f\\u043b\\u0430\\u0442\\u0430&lt;\\/div&gt;\\r\\n    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane&quot; id=&quot;settings&quot;&gt;\\u0414\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0430&lt;\\/div&gt;\\r\\n  &lt;\\/div&gt;\"},\"1\":{\"title\":\"\",\"description\":\"  &lt;!-- Nav tabs --&gt;\\r\\n  &lt;ul class=&quot;nav nav-tabs constructed-nav&quot; role=&quot;tablist&quot;&gt;\\r\\n    &lt;li role=&quot;presentation&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;#home&quot; aria-controls=&quot;home&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot; aria-expanded=&quot;true&quot;&gt;\\u0410\\u043d\\u043e\\u043d\\u0438\\u043c\\u043d\\u043e\\u0441\\u0442\\u044c&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n    &lt;li role=&quot;presentation&quot; class=&quot;&quot;&gt;&lt;a href=&quot;#profile&quot; aria-controls=&quot;profile&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot; aria-expanded=&quot;true&quot;&gt;\\u0411\\u0435\\u0437\\u043e\\u043f\\u0430\\u0441\\u043d\\u043e\\u0441\\u0442\\u044c&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n    &lt;li role=&quot;presentation&quot; class=&quot;&quot;&gt;&lt;a href=&quot;#messages&quot; aria-controls=&quot;messages&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot; aria-expanded=&quot;true&quot;&gt;\\u041e\\u043f\\u043b\\u0430\\u0442\\u0430&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n    &lt;li role=&quot;presentation&quot; class=&quot;&quot;&gt;&lt;a href=&quot;#settings&quot; aria-controls=&quot;settings&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot; aria-expanded=&quot;true&quot;&gt;\\u0414\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0430&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n  &lt;\\/ul&gt;\\r\\n\\r\\n  &lt;!-- Tab panes --&gt;\\r\\n  &lt;div class=&quot;tab-content&quot;&gt;\\r\\n    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane&quot; id=&quot;home&quot;&gt;\\u0410\\u043d\\u043e\\u043d\\u0438\\u043c\\u043d\\u043e\\u0441\\u0442\\u044c&lt;\\/div&gt;\\r\\n    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane active&quot; id=&quot;profile&quot;&gt;\\u0411\\u0435\\u0437\\u043e\\u043f\\u0430\\u0441\\u043d\\u043e\\u0441\\u0442\\u044c&lt;\\/div&gt;\\r\\n    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane&quot; id=&quot;messages&quot;&gt;\\u041e\\u043f\\u043b\\u0430\\u0442\\u0430&lt;\\/div&gt;\\r\\n    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane&quot; id=&quot;settings&quot;&gt;\\u0414\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0430&lt;\\/div&gt;\\r\\n  &lt;\\/div&gt;\"}},\"status\":\"1\"}'),
 (33, 'Featured right', 'featured', '{\"name\":\"Featured right\",\"product_name\":\"\",\"product\":[\"42\"],\"limit\":\"1\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}'),
 (34, 'Best sell right', 'bestseller', '{\"name\":\"Best sell right\",\"limit\":\"1\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}');
 
@@ -2557,9 +2420,9 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (34, 'Product 7', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/ipod_shuffle_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 18:07:54', '2011-09-30 01:07:17'),
 (35, 'Product 8', '', '', '', '', '', '', '', 1000, 5, '', 0, 0, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 18:08:31', '2011-09-30 01:06:17'),
 (36, 'Product 9', '', '', '', '', '', '', '', 994, 6, 'catalog/demo/ipod_nano_1.jpg', 8, 0, '100.0000', 100, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 18:09:19', '2011-09-30 01:07:12'),
-(40, 'product 11', '', '', '', '', '', '', '', 969, 5, 'catalog/demo/iphone_1.jpg', 8, 1, '101.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 21:07:12', '2011-09-30 01:06:53'),
+(40, 'product 11', '', '', '', '', '', '', '', 969, 5, 'catalog/demo/iphone_1.jpg', 8, 1, '101.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 4, '2009-02-03 21:07:12', '2011-09-30 01:06:53'),
 (41, 'Product 14', '', '', '', '', '', '', '', 977, 5, 'catalog/demo/imac_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 21:07:26', '2011-09-30 01:06:44'),
-(42, 'Product 15', '', '', '', '', '', '', '', 990, 5, 'catalog/demo/apple_cinema_30.jpg', 8, 1, '100.0000', 400, 9, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 2, 0, 1, 2, '2009-02-03 21:07:37', '2011-09-30 00:46:19'),
+(42, 'Product 15', '', '', '', '', '', '', '', 990, 5, 'catalog/demo/apple_cinema_30.jpg', 8, 1, '100.0000', 400, 9, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 2, 0, 1, 4, '2009-02-03 21:07:37', '2011-09-30 00:46:19'),
 (43, 'Product 16', '', '', '', '', '', '', '', 929, 5, 'catalog/demo/macbook_1.jpg', 8, 0, '500.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:07:49', '2011-09-30 01:05:46'),
 (44, 'Product 17', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/macbook_air_1.jpg', 8, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:00', '2011-09-30 01:05:53'),
 (45, 'Product 18', '', '', '', '', '', '', '', 998, 5, 'catalog/demo/macbook_pro_1.jpg', 8, 1, '2000.0000', 0, 100, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:17', '2011-09-15 22:22:01'),
@@ -3023,35 +2886,13 @@ CREATE TABLE `oc_product_to_category` (
 --
 
 INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
-(28, 20),
 (28, 24),
-(29, 20),
 (29, 24),
-(30, 20),
 (30, 33),
 (31, 33),
-(32, 34),
-(33, 20),
 (33, 28),
-(34, 34),
-(35, 20),
-(36, 34),
-(40, 20),
 (40, 24),
-(41, 27),
-(42, 20),
 (42, 28),
-(43, 18),
-(43, 20),
-(44, 18),
-(44, 20),
-(45, 18),
-(46, 18),
-(46, 20),
-(47, 18),
-(47, 20),
-(48, 20),
-(48, 34),
 (49, 57);
 
 -- --------------------------------------------------------
@@ -3303,17 +3144,10 @@ CREATE TABLE `oc_seo_url` (
 
 INSERT INTO `oc_seo_url` (`seo_url_id`, `store_id`, `language_id`, `query`, `keyword`) VALUES
 (824, 0, 1, 'product_id=48', 'ipod-classic'),
-(836, 0, 1, 'category_id=20', 'desktops'),
-(834, 0, 1, 'category_id=26', 'pc'),
-(835, 0, 1, 'category_id=27', 'mac'),
 (730, 0, 1, 'manufacturer_id=8', 'apple'),
 (844, 0, 1, 'information_id=4', 'about_us'),
 (768, 0, 1, 'product_id=42', 'test'),
-(789, 0, 1, 'category_id=34', 'mp3-players'),
 (781, 0, 1, 'category_id=36', 'test2'),
-(774, 0, 1, 'category_id=18', 'laptop-notebook'),
-(775, 0, 1, 'category_id=46', 'macs'),
-(776, 0, 1, 'category_id=45', 'windows'),
 (777, 0, 1, 'category_id=25', 'component'),
 (778, 0, 1, 'category_id=29', 'mouse'),
 (779, 0, 1, 'category_id=28', 'monitor'),
@@ -3325,25 +3159,6 @@ INSERT INTO `oc_seo_url` (`seo_url_id`, `store_id`, `language_id`, `query`, `key
 (786, 0, 1, 'category_id=17', 'software'),
 (787, 0, 1, 'category_id=24', 'smartphone'),
 (788, 0, 1, 'category_id=33', 'camera'),
-(790, 0, 1, 'category_id=43', 'test11'),
-(791, 0, 1, 'category_id=44', 'test12'),
-(792, 0, 1, 'category_id=47', 'test15'),
-(793, 0, 1, 'category_id=48', 'test16'),
-(794, 0, 1, 'category_id=49', 'test17'),
-(795, 0, 1, 'category_id=50', 'test18'),
-(796, 0, 1, 'category_id=51', 'test19'),
-(797, 0, 1, 'category_id=52', 'test20'),
-(798, 0, 1, 'category_id=58', 'test25'),
-(799, 0, 1, 'category_id=53', 'test21'),
-(800, 0, 1, 'category_id=54', 'test22'),
-(801, 0, 1, 'category_id=55', 'test23'),
-(802, 0, 1, 'category_id=56', 'test24'),
-(803, 0, 1, 'category_id=38', 'test4'),
-(804, 0, 1, 'category_id=37', 'test5'),
-(805, 0, 1, 'category_id=39', 'test6'),
-(806, 0, 1, 'category_id=40', 'test7'),
-(807, 0, 1, 'category_id=41', 'test8'),
-(808, 0, 1, 'category_id=42', 'test9'),
 (809, 0, 1, 'product_id=30', 'canon-eos-5d'),
 (840, 0, 1, 'product_id=47', 'hp-lp3065'),
 (811, 0, 1, 'product_id=28', 'htc-touch-hd'),
@@ -3388,9 +3203,10 @@ CREATE TABLE `oc_session` (
 
 INSERT INTO `oc_session` (`session_id`, `data`, `expire`) VALUES
 ('1b88dd1e7f9a39575432811b67', '{\"api_id\":\"1\"}', '2019-01-30 12:31:58'),
+('2e4df1c660586bd1de6fa0f974', '{\"api_id\":\"1\"}', '2019-02-03 07:01:25'),
 ('528d79add438e70cea8110ce67', '{\"api_id\":\"1\",\"language\":\"ru-ru\",\"currency\":\"USD\"}', '2019-01-30 12:33:09'),
 ('6fb197173472de702ab3de0b27', '{\"api_id\":\"1\",\"language\":\"ru-ru\",\"currency\":\"USD\"}', '2019-01-30 12:32:54'),
-('799a62d820b8cdc963ee703271', '{\"user_id\":\"1\",\"user_token\":\"9bCebEtjQq5LDVTs1Q12vDXtufabJQFg\",\"language\":\"ru-ru\",\"currency\":\"UZS\",\"compare\":[],\"account\":\"guest\",\"guest\":{\"customer_group_id\":\"1\",\"firstname\":\"Abdurauf\",\"lastname\":\"Sherkulov\",\"email\":\"abduraufsherkulov@gmail.com\",\"telephone\":\"933299939\",\"custom_field\":[],\"shipping_address\":\"1\"},\"payment_address\":{\"firstname\":\"Abdurauf\",\"lastname\":\"Sherkulov\",\"company\":\"\",\"address_1\":\"miniregion-4, 10a-2\",\"address_2\":\"\",\"postcode\":\"120105\",\"city\":\"Gulistan\",\"country_id\":\"226\",\"zone_id\":\"3717\",\"country\":\"Uzbekistan\",\"iso_code_2\":\"UZ\",\"iso_code_3\":\"UZB\",\"address_format\":\"\",\"custom_field\":[],\"zone\":\"Toshkent City\",\"zone_code\":\"TK\"},\"shipping_address\":{\"firstname\":\"Abdurauf\",\"lastname\":\"Sherkulov\",\"company\":\"\",\"address_1\":\"miniregion-4, 10a-2\",\"address_2\":\"\",\"postcode\":\"120105\",\"city\":\"Gulistan\",\"country_id\":\"226\",\"zone_id\":\"3717\",\"country\":\"Uzbekistan\",\"iso_code_2\":\"UZ\",\"iso_code_3\":\"UZB\",\"address_format\":\"\",\"zone\":\"Toshkent City\",\"zone_code\":\"TK\",\"custom_field\":[]},\"comment\":\"\",\"order_id\":2,\"install\":\"18fZv0OxBT\",\"wishlist\":[\"43\",\"40\",\"42\",\"30\"],\"shipping_methods\":{\"flat\":{\"title\":\"\\u0424\\u0438\\u043a\\u0441\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\\u043d\\u0430\\u044f \\u0441\\u0442\\u043e\\u0438\\u043c\\u043e\\u0441\\u0442\\u044c \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438\",\"quote\":{\"flat\":{\"code\":\"flat.flat\",\"title\":\"\\u0414\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0430 \\u0441 \\u0444\\u0438\\u043a\\u0441\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\\u043d\\u043e\\u0439 \\u0441\\u0442\\u043e\\u0438\\u043c\\u043e\\u0441\\u0442\\u044c\\u044e \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438\",\"cost\":\"5.00\",\"tax_class_id\":\"9\",\"text\":\"5.00 \\u0421\\u0443\\u043c\"}},\"sort_order\":\"1\",\"error\":false}},\"shipping_method\":{\"code\":\"flat.flat\",\"title\":\"\\u0414\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0430 \\u0441 \\u0444\\u0438\\u043a\\u0441\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\\u043d\\u043e\\u0439 \\u0441\\u0442\\u043e\\u0438\\u043c\\u043e\\u0441\\u0442\\u044c\\u044e \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438\",\"cost\":\"5.00\",\"tax_class_id\":\"9\",\"text\":\"5.00 \\u0421\\u0443\\u043c\"},\"payment_methods\":{\"cod\":{\"code\":\"cod\",\"title\":\"\\u041e\\u043f\\u043b\\u0430\\u0442\\u0430 \\u043f\\u0440\\u0438 \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0435\",\"terms\":\"\",\"sort_order\":\"5\"}},\"payment_method\":{\"code\":\"cod\",\"title\":\"\\u041e\\u043f\\u043b\\u0430\\u0442\\u0430 \\u043f\\u0440\\u0438 \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0435\",\"terms\":\"\",\"sort_order\":\"5\"}}', '2019-01-30 16:37:57'),
+('799a62d820b8cdc963ee703271', '{\"user_id\":\"1\",\"user_token\":\"J0rTo4X9KDTGe7bOzTsiuAQ6uSZ5SqzE\",\"language\":\"ru-ru\",\"currency\":\"UZS\",\"compare\":[],\"account\":\"guest\",\"guest\":{\"customer_group_id\":\"1\",\"firstname\":\"Abdurauf\",\"lastname\":\"Sherkulov\",\"email\":\"abduraufsherkulov@gmail.com\",\"telephone\":\"933299939\",\"custom_field\":[],\"shipping_address\":\"1\"},\"payment_address\":{\"firstname\":\"Abdurauf\",\"lastname\":\"Sherkulov\",\"company\":\"\",\"address_1\":\"miniregion-4, 10a-2\",\"address_2\":\"\",\"postcode\":\"120105\",\"city\":\"Gulistan\",\"country_id\":\"226\",\"zone_id\":\"3717\",\"country\":\"Uzbekistan\",\"iso_code_2\":\"UZ\",\"iso_code_3\":\"UZB\",\"address_format\":\"\",\"custom_field\":[],\"zone\":\"Toshkent City\",\"zone_code\":\"TK\"},\"shipping_address\":{\"firstname\":\"Abdurauf\",\"lastname\":\"Sherkulov\",\"company\":\"\",\"address_1\":\"miniregion-4, 10a-2\",\"address_2\":\"\",\"postcode\":\"120105\",\"city\":\"Gulistan\",\"country_id\":\"226\",\"zone_id\":\"3717\",\"country\":\"Uzbekistan\",\"iso_code_2\":\"UZ\",\"iso_code_3\":\"UZB\",\"address_format\":\"\",\"zone\":\"Toshkent City\",\"zone_code\":\"TK\",\"custom_field\":[]},\"comment\":\"\",\"order_id\":2,\"install\":\"18fZv0OxBT\",\"wishlist\":[\"43\",\"40\",\"42\",\"30\"]}', '2019-02-03 08:25:27'),
 ('a2f57aaa5510776dab12ad9fa1', '{\"api_id\":\"1\"}', '2019-01-30 12:32:18'),
 ('ad4f4ab2ebbabb746a92caea23', '{\"api_id\":\"1\"}', '2019-01-30 12:31:10'),
 ('b0458c965b55e61c5ddfa280c0', '{\"api_id\":\"1\"}', '2019-01-30 12:32:43'),
@@ -9143,7 +8959,7 @@ ALTER TABLE `oc_api_ip`
 -- AUTO_INCREMENT for table `oc_api_session`
 --
 ALTER TABLE `oc_api_session`
-  MODIFY `api_session_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `api_session_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `oc_attribute`
@@ -9173,7 +8989,7 @@ ALTER TABLE `oc_banner_image`
 -- AUTO_INCREMENT for table `oc_cart`
 --
 ALTER TABLE `oc_cart`
-  MODIFY `cart_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `cart_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `oc_category`
@@ -9335,7 +9151,7 @@ ALTER TABLE `oc_geo_zone`
 -- AUTO_INCREMENT for table `oc_information`
 --
 ALTER TABLE `oc_information`
-  MODIFY `information_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `information_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `oc_language`
